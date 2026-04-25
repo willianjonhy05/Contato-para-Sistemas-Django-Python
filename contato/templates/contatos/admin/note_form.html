@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Nova anotação interna</h1>
+
+<p><strong>Mensagem:</strong> {{ contact_message.subject }}</p>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit">Salvar anotação</button>
+    <a href="{% url 'contacts:staff_message_detail' contact_message.slug %}">Cancelar</a>
+</form>
+{% endblock %}

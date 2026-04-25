@@ -1,0 +1,9 @@
+Olá, {{ message.name }}.
+
+Recebemos sua mensagem sobre "{{ message.subject }}".
+
+Resposta:
+{{ message.response_message }}
+
+Atenciosamente,
+Equipe de atendimento

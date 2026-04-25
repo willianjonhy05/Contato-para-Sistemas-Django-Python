@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="contact-page">
+    <h1>Fale Conosco</h1>
+    <p>Envie sua mensagem. Retornaremos assim que possível.</p>
+
+    <form method="post" novalidate>
+        {% csrf_token %}
+
+        {{ form.non_field_errors }}
+
+        <div style="display:none;">
+            {{ form.website }}
+        </div>
+
+        <div>
+            {{ form.category.label_tag }}
+            {{ form.category }}
+            {{ form.category.errors }}
+        </div>
+
+        <div>
+            {{ form.name.label_tag }}
+            {{ form.name }}
+            {{ form.name.errors }}
+        </div>
+
+        <div>
+            {{ form.email.label_tag }}
+            {{ form.email }}
+            {{ form.email.errors }}
+        </div>
+
+        <div>
+            {{ form.phone.label_tag }}
+            {{ form.phone }}
+            {{ form.phone.errors }}
+        </div>
+
+        <div>
+            {{ form.subject.label_tag }}
+            {{ form.subject }}
+            {{ form.subject.errors }}
+        </div>
+
+        <div>
+            {{ form.message.label_tag }}
+            {{ form.message }}
+            {{ form.message.errors }}
+        </div>
+
+        <div>
+            {{ form.terms_accepted }}
+            {{ form.terms_accepted.label_tag }}
+            {{ form.terms_accepted.errors }}
+        </div>
+
+        <button type="submit">Enviar mensagem</button>
+    </form>
+</section>
+{% endblock %}

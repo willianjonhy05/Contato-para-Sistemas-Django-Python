@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="contact-success">
+    <h1>Mensagem enviada</h1>
+    <p>Obrigado pelo contato. Sua mensagem foi recebida com sucesso.</p>
+    <a href="{% url 'contacts:contact_create' %}">Enviar nova mensagem</a>
+</section>
+{% endblock %}

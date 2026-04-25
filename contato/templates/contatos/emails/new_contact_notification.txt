@@ -1,0 +1,12 @@
+Nova mensagem de contato recebida.
+
+Nome: {{ message.name }}
+E-mail: {{ message.email }}
+Telefone: {{ message.phone|default:"Não informado" }}
+Categoria: {{ message.category|default:"Sem categoria" }}
+Assunto: {{ message.subject }}
+
+Mensagem:
+{{ message.message }}
+
+Data de envio: {{ message.created_at|date:"d/m/Y H:i" }}
